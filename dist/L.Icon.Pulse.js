@@ -15,7 +15,7 @@
             L.setOptions(this,options);
 
             // css
-            
+
             var uniqueClassName = 'lpi-'+ new Date().getTime()+'-'+Math.round(Math.random()*100000);
 
             var before = ['background-color: '+this.options.fillColor];
@@ -37,7 +37,7 @@
                 '.'+uniqueClassName+'{'+before.join(';')+';}',
                 '.'+uniqueClassName+':after{'+after.join(';')+';}',
             ].join('');
- 
+
             var el = document.createElement('style');
             if (el.styleSheet){
                 el.styleSheet.cssText = css;
@@ -52,9 +52,9 @@
             this.options.className = this.options.className+' leaflet-pulsing-icon '+uniqueClassName;
 
             // initialize icon
-            
+
             L.DivIcon.prototype.initialize.call(this, options);
-        
+
         }
     });
 
